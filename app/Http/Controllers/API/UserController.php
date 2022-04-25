@@ -43,7 +43,7 @@ class UserController extends Controller
            ], 'User Registered');
         } catch (Exception $error)
         {
-            return ResponseFormatter::success([
+            return ResponseFormatter::error([
                 'message' => 'Something when wrong',
                 'error' => $error
             ], 'Authentication Failed', 500);
