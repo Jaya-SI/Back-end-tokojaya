@@ -13,7 +13,7 @@ class CreateTransactionItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transactions_items', function (Blueprint $table) {
+        Schema::create('transaction_items', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('users_id');
             $table->bigInteger('products_id');
@@ -30,6 +30,6 @@ class CreateTransactionItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions_items');
+        Schema::dropIfExists('transaction_items');
     }
 }
